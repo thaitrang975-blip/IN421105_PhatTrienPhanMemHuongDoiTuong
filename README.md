@@ -1,4 +1,5 @@
 # Refactoring EduHub - Ch02 (SOLID & Design Patterns)
+**Sinh viên:** Thái Thị Hồng Trang - MSSV: 0024419352
 
 Dự án này là bài tập thực hành refactoring mã nguồn C# nhằm giải quyết tình trạng vi phạm nguyên lý thiết kế. Ban đầu, hệ thống sử dụng một lớp "God Object" là `ClubManager` ôm đồm quá nhiều trách nhiệm, gây khó khăn cho việc bảo trì và mở rộng.
 
