@@ -18,15 +18,15 @@ public class NotificationServiceFactory : INotificationServiceFactory
 
 public class GmailNotifier : INotificationService
 {
-    public void Send(string to, string msg) => Console.WriteLine($"Sending Gmail notification to {to}: {msg}");
+    public void SendNotification(string to, string msg) => Console.WriteLine($"Sending Gmail notification to {to}: {msg}");
 }
 
 public class YahooNotifier : INotificationService
 {
-    public void Send(string to, string msg) => Console.WriteLine($"Sending Yahoo notification to {to}: {msg}");
+    public void SendNotification(string to, string msg) => Console.WriteLine($"Sending Yahoo notification to {to}: {msg}");
 }
 
 public class GenericNotifier : INotificationService
 {
-    public void Send(string to, string msg) => Console.WriteLine($"Sending generic email to {to}: {msg}");
+    public void SendNotification(string to, string msg) => Console.WriteLine($"Sending generic email to {to}: {msg}");
 }

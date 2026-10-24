@@ -11,16 +11,20 @@ public class Event
     public HashSet<Guid> RegisteredMemberIds { get; } = new();
     public HashSet<Guid> CheckedInMemberIds { get; } = new();
 
-    // TODO (Nhiệm vụ 4): đăng ký tham dự; trả về false nếu thành viên đã đăng ký trước đó.
     public bool Register(Guid memberId)
     {
-        throw new NotImplementedException();
+        if (RegisteredMemberIds.Contains(memberId))
+            return false;
+
+        RegisteredMemberIds.Add(memberId);
+        return true;
     }
 
-    // TODO (Nhiệm vụ 4): chỉ thành viên đã đăng ký mới được check-in,
-    // ngược lại ném InvalidOperationException.
     public void CheckIn(Guid memberId)
     {
-        throw new NotImplementedException();
+        if (!RegisteredMemberIds.Contains(memberId))
+            throw new InvalidOperationException("Thành viên chưa đăng ký không thể check-in.");
+
+        CheckedInMemberIds.Add(memberId);
     }
 }

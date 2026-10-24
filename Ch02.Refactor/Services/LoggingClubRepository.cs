@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using EduHub.Ch02.Domain;
 using EduHub.Ch02.Interfaces;
 
@@ -33,4 +35,8 @@ public class LoggingClubRepository : IClubRepository
     }
 
     public int GetMemberCount(Guid clubId) => _innerRepository.GetMemberCount(clubId);
+
+    public Club GetClubById(Guid clubId) => _innerRepository.GetClubById(clubId);
+
+    public List<Member> GetMembersByClub(Guid clubId) => _innerRepository.GetMembersByClub(clubId);
 }
